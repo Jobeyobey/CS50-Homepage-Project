@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2909939846.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- Style Import -->
+  <link href="styles.css" rel="stylesheet">
+  <!-- Title and Favicon -->
+  <title>Overwatch 2</title>
+  <link rel="icon" type="image/x-icon" href="/images/OW2-Icon.png">
+  <script src="popup.js"></script>
+</head>
+
+<body id="bootstrap-overrides">
+  <header>
+    <nav>
+      <!-- Nav icon and buttons -->
+      <a href="/index.html"><img src="/images/OW2-Icon.png" alt="Overwatch Icon" id="nav-icon"></a>
+      <!-- Desktop Nav Links-->
+      <a href="/heroes.html" class="nav-button desktop">Heroes</a>
+      <div class="nav-divider desktop"></div>
+      <a href="/maps.html" class="nav-button desktop">Maps</a>
+      <div class="nav-divider desktop"></div>
+      <a href="/modes.html" class="nav-button desktop selected">Modes</a>
+      <a href="#" class="nav-button primary desktop">Play Now</a>
+      <!-- Mobile Buttons -->
+      <div class="dropdown-center dropdown-style mobile">
+        <button class="btn dropdown-button dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Modes
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/index.html">Home</a></li>
+          <li><a class="dropdown-item" href="/heroes.html">Heroes</a></li>
+          <li><a class="dropdown-item" href="/maps.html">Maps</a></li>
+        </ul>
+      </div>
+      <a href="#" class="nav-button primary mobile">Play Now</a>
+    </nav>
+    <div class="hero-banner-container">
+      <h1 class="banner-text">Game Modes</h1>
+      <img class="banner-image" src="images/game-modes.png" alt="Overwatch Map Banner Image">
+    </div>
+  </header>
+  <!-- Email popup -->
+  <div id="popup-container" class="popup popup-container">
+      <div class="speech-bubble">
+          Join the team!
+          <form id="emailForm" onsubmit="handleEmail(event)">
+              <input type="email" id="email" placeholder="Email">
+              <button type="submit" id="submit">Submit</button>
+          </form>
+      </div>
+      <img src="images/anna-popup.webp" class="popup-img" alt="Image of Overwatch Hero, Anna">
+  </div>
+  <main>
+    <div class="alt-page-main-container">
+      <!-- Page Description -->
+      <div class="main-text white">
+        <h1>Master different game modes</h1>
+        <p>Overwatch offers a variety of different game modes.
+          Battle in the casual or competitive ladder, which will see you fighting in Payload, Capture Point, Hybrid, Push
+          or even Capture The Flag game modes. Alternatively, try out the arcade with a new ways to play every week!
+        </p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/payload.png" class="mode-img" alt="Image of Escort game mode">
+        <h4 class="element-title">Escort</h4>
+        <p class="element-description">In Escort, there is an attacking and a defending team.
+          The attacking team aims to escort a payload across the map to the objective, while the defending team aims to stop them.</p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/control.jpg" class="mode-img" alt="Image of Control game mode">
+        <h4 class="element-title">Control</h4>
+        <p class="element-description">In Control, there are three stages that get cycled through every round.
+          All stages are symmetrical with a single control point in the center that both teams will attempt to capture.
+          The first team to win two rounds wins.</p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/push.png" class="mode-img" alt="Image of Push game mode">
+        <h4 class="element-title">Push</h4>
+        <p class="element-description">Two teams fight for control of a robot, which pushes a barricade for each team.
+          The team who pushes their barricade to the end of the track, or the furthest along it before time runs out, wins!
+        </p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/ctf.png" class="mode-img" alt="Image of CTF game mode">
+        <h4 class="element-title">Capture the Flag</h4>
+        <p class="element-description">Capture the opposing team's flag and return it to your team's base,
+          and prevent the enemy team from doing the same to you! The first team to 3 points is the winner.</p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/deathmatch.png" class="mode-img" alt="Image of Deathamtch game mode">
+        <h4 class="element-title">Deathmatch</h4>
+        <p class="element-description">There is one objective in Deathmatch: to reach 20 points before anyone else
+          or have the most amount of points before time runs out.</p>
+      </div>
+      <div class="element-container">
+        <img src="/images/modes/arcade.png" class="mode-img" alt="Image of Arcade game mode">
+        <h4 class="element-title">Arcade</h4>
+        <p class="element-description">The Arcade has a rotating variety of exclusive game modes, maps, and rulesets.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="https://www.instagram.com/playoverwatch" target="_blank"><i class="fa-brands fa-instagram footer-icon"></i></a>
+    <a href="https://www.youtube.com/c/playoverwatch" target="_blank"><i class="fa-brands fa-youtube footer-icon"></i></a>
+    <a href="https://twitter.com/PlayOverwatch" target="_blank"><i class="fa-brands fa-twitter footer-icon"></i></a>
+    <a href="https://www.twitch.tv/playoverwatch" target="_blank"><i class="fa-brands fa-twitch footer-icon"></i></a>
+  </footer>
+</body>
+
+</html>
